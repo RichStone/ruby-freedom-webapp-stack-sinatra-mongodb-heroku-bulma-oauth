@@ -1,0 +1,15 @@
+development:
+  clients:
+    default:
+      database: freedom_stack
+      hosts:
+        - localhost:27017
+      options:
+        server_selection_timeout: 1
+
+production:
+  clients:
+    default:
+      uri: mongodb+srv://freedom-stack:<%= ENV['MONGODB_CLUSTER_PASSWORD'] %>@cluster0.zhtt7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+      options:
+        server_selection_timeout: 5
